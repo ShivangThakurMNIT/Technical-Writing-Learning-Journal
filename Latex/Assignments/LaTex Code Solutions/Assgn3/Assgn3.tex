@@ -1,0 +1,313 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+
+
+\title{lab3}
+\author{CHAITANYA PRATAP SINGH}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Assignment 3}
+
+\subsection{\textbf{Ques 1}}
+\[\overbrace{a+b+c}^{\text{First Group}}
++
+\underbrace{x+y+z}_{\text{Second Group}} 
+=
+\overbrace{\underbrace{a+b}_{\text{Sum 1}}+c}^{\text{Total}}\]
+
+
+\subsection{\textbf{Ques 2}}
+\[
+A = 
+\left[
+\begin{array}{c | ccc}
+ & x_1 & x_2 & x_3 \\ \hline
+ y_1 & a_{11} & a_{12} & a_{13} \\
+ y_2 & a_{21} & a_{22} & a_{23} \\
+ y_3 & a_{31} & a_{32} & a_{33}
+ \end{array}
+ \right]
+ \]
+
+ \subsection{\textbf{Ques 3}}
+ \[
+ f(x)=
+ \begin{cases}
+ x^2+2x+1, & x<0, \\[4pt]
+ \sqrt{x}+1, & 0\leq x<4, \\[4pt]
+ \dfrac{x^2-1}{x-1}, & x\geq4.
+ \end{cases}
+ \]
+
+
+\subsection{\textbf{Ques 4}}
+ \[
+ \left[
+ \begin{array}{ccccc}
+ \overbrace{a_{11}\quad a_{12}\quad
+ a_{13}}^{\text{Column Group 1}}
+ & 
+ \overbrace{a_{14}\quad a_{15}}^{\text{Column Group 2}} 
+ \\
+ a_{21}\quad a_{22}\quad a_{23} & a_{24}\quad a{25}\\
+ a_{31}\quad a_{32}\quad a_{33} & a_{34}\quad a_{35}\\
+ \end{array}
+ \right]
+ \]
+
+
+\subsection{\textbf{Ques 5}}
+\[
+F(x)= 
+\underbrace{
+\overbrace{
+\sum_{i=1}^{n}
+\left(a_i x_i^2+b_i x_i^2+c_i\right)}^{\text{Quadratic Configuration}}
++
+\overbrace{
+\begin{bmatrix}
+x_1 & x_2 & \cdots & x_n
+\end{bmatrix}
+A
+\begin{bmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{bmatrix}
+}^{\text{Matrix Contribution}}
+}_{\text{Total Energy}}
+\]
+
+where
+\[
+A=
+ \begin{bmatrix}
+ a_{11} & a_{12} & \cdots & a_{1n}\\
+ a_{21} & a_{22} & \cdots & a_{2n}\\
+ \vdots & \vdots & \ddots & \vdots\\
+ a_{n1} & a_{n2} & \cdots & a_{nn}\\
+ \end{bmatrix}
+ \]
+ 
+
+
+ \subsection{\textbf{Ques 6}}
+ \[
+ \begin{array}{|c|c|c|c|c|}
+ \hline
+ \textbf{Roll No.} & \textbf{Name} & 
+ \textbf{Department} & \textbf{Semester} & \textbf{CGPA}
+ \\
+ \hline
+ 101 & \text{Amit} & \text{CSE} & 2 & 8.45 \\
+ 102 & \text{Neha} & \text{CSE} & 4 & 9.12 \\
+ 103 & \text{Rahul} & \text{ECE} & 4 & 8.76 \\
+ 104 & \text{Priya} & \text{ECE} & 4 & 9.01 \\
+ \hline
+ \end{array}
+ \]
+
+
+ \subsection{\textbf{Ques 7}}
+ \begin{table}[h]
+ \centering
+ \begin{tabular}{|c|c|c|}
+ \hline
+ \multicolumn{3}{|c|}{\textbf{Academic Performance}} \\ \hline
+ \textbf{Student} & \textbf{Midterm} & \textbf{Final} \\ \hline
+ A & 78 & 89 \\
+ B & 85 & 92 \\ 
+ C & 91 & 94 \\
+ \hline
+ \end{tabular}
+ \end{table}
+
+\subsection{\textbf{Ques 8}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Department} & \textbf{Course} 
+& \textbf{Credits} & \textbf{Grades} \\
+\hline
+\multirow{3}{*}{CSE} &
+Data Structures & 4 & A \\
+& Machine Learning & 4 & A+ \\
+& Operating System & 3 & B+ \\
+\hline
+\multirow{2}{*}{ECE} &
+Digital Electronics & 4 & A \\
+& Signal & 3 & B+ \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\subsection{\textbf{Ques 9}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\rowcolor{blue!60}
+\textcolor{white}{\textbf{Model}} & \textcolor{white}{\textbf{Parameter}}
+&
+\textcolor{white}{\textbf{FLOPs}} &
+\textcolor{white}{\textbf{Accuracy}} &
+\textcolor{white}{\textbf{Energy (kWh)}} \\
+\hline
+\rowcolor{blue!10}
+ResNet18 & 11.7M & 1.8G & 94.2\% & 0.00093 \\
+\hline
+MobileNetV2 & 3.5M & 0.3G & 92.8\% & 0.00061 \\
+\hline
+\rowcolor{blue!10}
+EfficientNet-B0 & 5.3M & 0.39G & 93.5\% & 0.00072\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\textbf{Ques 10}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\rowcolor{blue!60}
+\textcolor{white}{\textbf{Student}} & \textcolor{white}{\textbf{Mathematics}} &
+\textcolor{white}{\textbf{Physics}} & \textcolor{white}{\textbf{Computer Science}} \\
+\hline
+
+Amit &
+\cellcolor{green!25}92 & \cellcolor{yellow!30}81 & \cellcolor{green!25}95 \\
+\hline
+
+Neha &
+\cellcolor{red!25}72 & \cellcolor{yellow!30}88 & \cellcolor{green!25}91\\
+\hline
+
+Rahul &
+\cellcolor{red!25}68 & \cellcolor{red!25}74 & \cellcolor{yellow!30}79 \\
+\hline
+
+Priya &
+\cellcolor{green!25}96 & \cellcolor{green!25}94 & \cellcolor{green!25}98 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\subsection{\textbf{Ques 11}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2cm}|p{4cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\textbf{Technique} & \textbf{Description} & \textbf{Advantages} & \textbf{Limitations} \\
+\hline
+Pruning & Removes unnecessary parameters from a neural network. & Reduces model size and computation. & May reduce accuracy. \\
+\hline
+Quantization & Represents weights using lower precision. & Reduces memory and energy consumption. & Can introduce numerical error. \\
+\hline
+Knowledge Distillation & Transfers knowledge from a large teacher model to a smaller student model. & Produces compact models. 
+& Requires training a teacher model. \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\newpage
+\subsection{\textbf{Ques 12}}
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Model} & \textbf{Parameters} & \textbf{FLOPs} & \textbf{Accuracy} & \textbf{Energy} \\
+\midrule
+ResNet18       & 11.7M & 1.82G & 94.21 & 0.00093 \\
+MobileNetV2    & 3.5M  & 0.30G & 92.84 & 0.00061 \\
+EfficientNet-B0 & 5.3M & 0.39G & 93.52 & 0.00072 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{\textbf{Ques 13}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Architecture} & \textbf{Performance} \\
+\hline
+
+CNN & Conv $\rightarrow$ ReLU $\rightarrow$ Pool & 
+\begin{tabular}{c|c}
+Metric & Value \\
+\hline
+Accuracy & 94\% \\
+F1 Score & 93\% \\
+\end{tabular}
+\\
+\hline
+ResNet &
+Conv $\rightarrow$ BN $\rightarrow$ ReLU &
+\begin{tabular}{c|c}
+Metric & Value \\
+\hline
+Accuracy & 96\% \\
+F1 Score & 95\% \\
+\end{tabular}
+\\
+\hline
+ViT &
+Attention $\rightarrow$ MLP &
+\begin{tabular}{c|c}
+Metric & Value \\
+\hline
+Accuracy & 97\% \\
+F1 Score & 96\% \\
+\end{tabular}
+\\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+\subsection{\textbf{Ques 14}}
+\renewcommand{\arraystretch}{2.2} % Increases row height
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Loss Function} &\textbf{Parameters} & \textbf{Complexity} \\
+\hline
+
+Linear &$\displaystyle L=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2$ & 10K & $O(n)$ \\
+\hline
+
+CNN &
+$\displaystyle L=-\sum y\log(\hat{y})$ & 1.2M & $O(n^2)$ \\
+\hline
+
+Transformer &
+$\displaystyle L=-\sum_{i} y_i\log p_i$ & 110M & $O(n^2d)$ \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\centering{--End of Assignment--}
+\end{document}
+\end{document}
+

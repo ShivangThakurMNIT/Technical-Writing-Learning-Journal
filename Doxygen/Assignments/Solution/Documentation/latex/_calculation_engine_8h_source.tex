@@ -1,0 +1,46 @@
+\doxysection{Calculation\+Engine.\+h}
+\hypertarget{_calculation_engine_8h_source}{}\label{_calculation_engine_8h_source}\index{CalculationEngine.h@{CalculationEngine.h}}
+\doxymbox{\hyperlink{_calculation_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ CALCULATION\_ENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ CALCULATION\_ENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_logger_8h}{Logger.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00018}\doxymbox{\hyperlink{class_calculation_engine}{00018}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_calculation_engine_a5dd2e4127b884643239e4802900dd529}{CalculationEngine}}\ \{}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00024}\doxymbox{\hyperlink{class_calculation_engine_a5dd2e4127b884643239e4802900dd529}{00024}}\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_calculation_engine_a5dd2e4127b884643239e4802900dd529}{CalculationEngine}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_logger}{Logger}}\&\ logger)}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{logger\_}}(logger)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00036}\doxymbox{\hyperlink{class_calculation_engine_a19d4dd01a764735328b503a531be8ce0}{00036}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_calculation_engine_a19d4dd01a764735328b503a531be8ce0}{power}}(\textcolor{keywordtype}{double}\ base,\ \textcolor{keywordtype}{int}\ exponent)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (base\ ==\ 0.0\ \&\&\ exponent\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{logger\_}}.\doxymbox{\hyperlink{class_logger_ab588e2088c93df300a0bab12e82f41e7}{log}}(\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a902b0d55fddef6f8d651fe1035b7d4bd}{Logger::LogLevel::Error}},}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Zero\ cannot\ be\ raised\ to\ a\ negative\ exponent."{}});}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}zero\ to\ a\ negative\ exponent"{}});}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ exponent\ <\ 0\ ?\ -\/exponent\ :\ exponent;}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ result\ *=\ base;}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (exponent\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ 1.0\ /\ result;}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{logger\_}}.\doxymbox{\hyperlink{class_logger_ab588e2088c93df300a0bab12e82f41e7}{log}}(\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875}{Logger::LogLevel::Info}},\ \textcolor{stringliteral}{"{}Power\ calculation\ completed."{}});}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00058}00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00059}\doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{00059}}\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_logger}{Logger}}\&\ \doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{logger\_}};}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00060}00060\ \};}
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_calculation_engine_8h_source_l00062}00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

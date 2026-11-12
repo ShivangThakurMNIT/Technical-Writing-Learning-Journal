@@ -1,0 +1,128 @@
+\doxysection{Calculation\+Engine Class Reference}
+\hypertarget{class_calculation_engine}{}\label{class_calculation_engine}\index{CalculationEngine@{CalculationEngine}}
+
+
+Performs mathematical calculations and reports their outcomes.  
+
+
+
+
+{\ttfamily \+\#include $<$Calculation\+Engine.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_calculation_engine_a5dd2e4127b884643239e4802900dd529}{Calculation\+Engine}} (const \doxymbox{\hyperlink{class_logger}{Logger}} \&logger)
+\begin{DoxyCompactList}\small\item\em Creates a calculation engine. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_calculation_engine_a19d4dd01a764735328b503a531be8ce0}{power}} (double base, int exponent) const
+\begin{DoxyCompactList}\small\item\em Calculates a base raised to an integer exponent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \doxymbox{\hyperlink{class_logger}{Logger}} \& \doxymbox{\hyperlink{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}{logger\_}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs mathematical calculations and reports their outcomes. 
+
+The calculation engine uses a \doxylink{class_logger}{Logger} instance to report successful operations and errors. The logger is supplied when the engine is created. 
+
+Definition at line \doxymbox{\hyperlink{_calculation_engine_8h_source_l00018}{18}} of file \doxymbox{\hyperlink{_calculation_engine_8h_source}{Calculation\+Engine.\+h}}.
+
+
+
+\label{class_calculation_engine_doc-constructors}
+\Hypertarget{class_calculation_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_calculation_engine_a5dd2e4127b884643239e4802900dd529}\index{CalculationEngine@{CalculationEngine}!CalculationEngine@{CalculationEngine}}
+\index{CalculationEngine@{CalculationEngine}!CalculationEngine@{CalculationEngine}}
+\doxysubsubsection{\texorpdfstring{CalculationEngine()}{CalculationEngine()}}
+{\footnotesize\ttfamily \label{class_calculation_engine_a5dd2e4127b884643239e4802900dd529} 
+Calculation\+Engine::\+\+Calculation\+Engine (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_logger}{Logger}} \&}]{logger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Creates a calculation engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & \doxylink{class_logger}{Logger} used to report calculation messages. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_calculation_engine_8h_source_l00024}{24}} of file \doxymbox{\hyperlink{_calculation_engine_8h_source}{Calculation\+Engine.\+h}}.
+
+
+
+References \doxymbox{\hyperlink{_calculation_engine_8h_source_l00059}{logger\_}}.
+
+
+
+\label{class_calculation_engine_doc-func-members}
+\Hypertarget{class_calculation_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_calculation_engine_a19d4dd01a764735328b503a531be8ce0}\index{CalculationEngine@{CalculationEngine}!power@{power}}
+\index{power@{power}!CalculationEngine@{CalculationEngine}}
+\doxysubsubsection{\texorpdfstring{power()}{power()}}
+{\footnotesize\ttfamily \label{class_calculation_engine_a19d4dd01a764735328b503a531be8ce0} 
+double Calculation\+Engine::\+power (\begin{DoxyParamCaption}\item[{double}]{base}{, }\item[{int}]{exponent}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates a base raised to an integer exponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Number to be raised to the specified exponent. \\
+\hline
+{\em exponent} & Power to which the base is raised. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of base raised to exponent. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If base is zero and exponent is negative.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000001}{Todo}}]Add explicit handling for the minimum integer exponent to avoid overflow when converting a negative exponent to a positive count. \end{DoxyRefDesc}
+
+
+Definition at line \doxymbox{\hyperlink{_calculation_engine_8h_source_l00036}{36}} of file \doxymbox{\hyperlink{_calculation_engine_8h_source}{Calculation\+Engine.\+h}}.
+
+
+
+References \doxymbox{\hyperlink{_logger_8h_source_l00030}{Logger::\+\+Error}}, \doxymbox{\hyperlink{_logger_8h_source_l00028}{Logger::\+\+Info}}, \doxymbox{\hyperlink{_logger_8h_source_l00045}{Logger::\+log()}}, and \doxymbox{\hyperlink{_calculation_engine_8h_source_l00059}{logger\_}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{main_8cpp_source_l00027}{main()}}.
+
+
+
+\label{class_calculation_engine_doc-variable-members}
+\Hypertarget{class_calculation_engine_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8}\index{CalculationEngine@{CalculationEngine}!logger\_@{logger\_}}
+\index{logger\_@{logger\_}!CalculationEngine@{CalculationEngine}}
+\doxysubsubsection{\texorpdfstring{logger\_}{logger\_}}
+{\footnotesize\ttfamily \label{class_calculation_engine_a0c2c89808b330aa913c9335f9f295ca8} 
+const \doxymbox{\hyperlink{class_logger}{Logger}}\& Calculation\+Engine::\+logger\_\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_calculation_engine_8h_source_l00059}{59}} of file \doxymbox{\hyperlink{_calculation_engine_8h_source}{Calculation\+Engine.\+h}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{_calculation_engine_8h_source_l00024}{Calculation\+Engine()}}, and \doxymbox{\hyperlink{_calculation_engine_8h_source_l00036}{power()}}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_calculation_engine_8h}{Calculation\+Engine.\+h}}\end{DoxyCompactItemize}

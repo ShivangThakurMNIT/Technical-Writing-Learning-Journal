@@ -1,0 +1,207 @@
+\doxysection{Logger Class Reference}
+\hypertarget{class_logger}{}\label{class_logger}\index{Logger@{Logger}}
+
+
+Writes application messages to the console.  
+
+
+
+
+{\ttfamily \+\#include $<$Logger.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} \{ \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36aa603905470e2a5b8c13e96b579ef0dba}{Debug}}
+, \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875}{Info}}
+, \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Warning}}
+, \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a902b0d55fddef6f8d651fe1035b7d4bd}{Error}}
+ \}
+\begin{DoxyCompactList}\small\item\em Severity levels supported by the logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_logger_a749191f6f66909dc58fefb91487050d0}{Logger}} (\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} minimum\+Level=\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875}{Log\+Level::\+\+Info}})
+\begin{DoxyCompactList}\small\item\em Constructs a logger with a minimum severity level. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_logger_ab588e2088c93df300a0bab12e82f41e7}{log}} (\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} level, const std::\+string \&message) const
+\begin{DoxyCompactList}\small\item\em Prints a message if its severity meets the configured threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_logger_ab41766cd2ef4273b2317a70728da83ad}{level\+Name}} (\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} level)
+\begin{DoxyCompactList}\small\item\em Converts a severity level to its printable name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} \doxymbox{\hyperlink{class_logger_aee83c1662888965f848a79792ddc8b97}{minimum\+Level\_}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Writes application messages to the console. 
+
+\doxylink{class_logger}{Logger} filters messages according to a configured minimum severity. Only messages whose severity is equal to or greater than the configured minimum level are printed. 
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00020}{20}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+\label{class_logger_doc-enum-members}
+\Hypertarget{class_logger_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_logger_ac744681e23720966b5f430ec2060da36}\index{Logger@{Logger}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily \label{class_logger_ac744681e23720966b5f430ec2060da36} 
+enum class \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Logger::\+\+Log\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Severity levels supported by the logger. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Debug@{Debug}!Logger@{Logger}}
+\index{Logger@{Logger}!Debug@{Debug}}
+}\Hypertarget{class_logger_ac744681e23720966b5f430ec2060da36aa603905470e2a5b8c13e96b579ef0dba}\label{class_logger_ac744681e23720966b5f430ec2060da36aa603905470e2a5b8c13e96b579ef0dba} 
+Debug&Detailed diagnostic information useful during development. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Info@{Info}!Logger@{Logger}}
+\index{Logger@{Logger}!Info@{Info}}
+}\Hypertarget{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875}\label{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875} 
+Info&General information about normal application operation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Warning@{Warning}!Logger@{Logger}}
+\index{Logger@{Logger}!Warning@{Warning}}
+}\Hypertarget{class_logger_ac744681e23720966b5f430ec2060da36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}\label{class_logger_ac744681e23720966b5f430ec2060da36a0eaadb4fcb48a0a0ed7bc9868be9fbaa} 
+Warning&A condition that may require attention. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!Logger@{Logger}}
+\index{Logger@{Logger}!Error@{Error}}
+}\Hypertarget{class_logger_ac744681e23720966b5f430ec2060da36a902b0d55fddef6f8d651fe1035b7d4bd}\label{class_logger_ac744681e23720966b5f430ec2060da36a902b0d55fddef6f8d651fe1035b7d4bd} 
+Error&A failure that prevents an operation from completing normally. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+\label{class_logger_doc-constructors}
+\Hypertarget{class_logger_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_logger_a749191f6f66909dc58fefb91487050d0}\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily \label{class_logger_a749191f6f66909dc58fefb91487050d0} 
+Logger::\+\+Logger (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}}}]{minimum\+Level}{ = {\ttfamily \doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36a4059b0251f66a18cb56f544728796875}{Log\+Level::\+\+Info}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a logger with a minimum severity level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minimum\+Level} & Lowest severity level that will be printed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00037}{37}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+References \doxymbox{\hyperlink{_logger_8h_source_l00028}{Info}}, and \doxymbox{\hyperlink{_logger_8h_source_l00052}{minimum\+Level\_}}.
+
+
+
+\label{class_logger_doc-func-members}
+\Hypertarget{class_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logger_ab41766cd2ef4273b2317a70728da83ad}\index{Logger@{Logger}!levelName@{levelName}}
+\index{levelName@{levelName}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{levelName()}{levelName()}}
+{\footnotesize\ttfamily \label{class_logger_ab41766cd2ef4273b2317a70728da83ad} 
+const char \texorpdfstring{$\ast$}{*} Logger::\+level\+Name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}}}]{level}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Converts a severity level to its printable name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Severity level to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant string containing the severity name. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00059}{59}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+References \doxymbox{\hyperlink{_logger_8h_source_l00027}{Debug}}, \doxymbox{\hyperlink{_logger_8h_source_l00030}{Error}}, \doxymbox{\hyperlink{_logger_8h_source_l00028}{Info}}, and \doxymbox{\hyperlink{_logger_8h_source_l00029}{Warning}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{_logger_8h_source_l00045}{log()}}.
+
+\Hypertarget{class_logger_ab588e2088c93df300a0bab12e82f41e7}\index{Logger@{Logger}!log@{log}}
+\index{log@{log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \label{class_logger_ab588e2088c93df300a0bab12e82f41e7} 
+void Logger::\+log (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}}}]{level}{, }\item[{const std::\+string \&}]{message}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints a message if its severity meets the configured threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Severity level of the message. \\
+\hline
+{\em message} & Text of the message to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00045}{45}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+References \doxymbox{\hyperlink{_logger_8h_source_l00059}{level\+Name()}}, and \doxymbox{\hyperlink{_logger_8h_source_l00052}{minimum\+Level\_}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{_calculation_engine_8h_source_l00036}{Calculation\+Engine::\+power()}}.
+
+
+
+\label{class_logger_doc-variable-members}
+\Hypertarget{class_logger_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_logger_aee83c1662888965f848a79792ddc8b97}\index{Logger@{Logger}!minimumLevel\_@{minimumLevel\_}}
+\index{minimumLevel\_@{minimumLevel\_}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{minimumLevel\_}{minimumLevel\_}}
+{\footnotesize\ttfamily \label{class_logger_aee83c1662888965f848a79792ddc8b97} 
+\doxymbox{\hyperlink{class_logger_ac744681e23720966b5f430ec2060da36}{Log\+Level}} Logger::\+minimum\+Level\_\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_logger_8h_source_l00052}{52}} of file \doxymbox{\hyperlink{_logger_8h_source}{Logger.\+h}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{_logger_8h_source_l00045}{log()}}, and \doxymbox{\hyperlink{_logger_8h_source_l00037}{Logger()}}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_logger_8h}{Logger.\+h}}\end{DoxyCompactItemize}
