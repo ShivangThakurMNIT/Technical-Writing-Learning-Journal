@@ -109,3 +109,6 @@ This assignment helped me understand that useful software documentation is more 
 
 It also introduced me to the idea of generating documentation automatically from source code. By keeping documentation comments alongside the implementation, Doxygen makes it easier to maintain documentation as a project evolves.
 
+## Screenshots
+
+![alt text](assets/image-dox.png)

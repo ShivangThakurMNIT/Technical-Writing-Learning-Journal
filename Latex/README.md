@@ -133,3 +133,7 @@ These assignments gave me a practical understanding of LaTeX as a document prepa
 I learned how to represent mathematical expressions clearly, structure complex equations, organize tables, insert and position figures, and customize the appearance of longer documents.
 
 An important takeaway was that LaTeX separates the content of a document from many aspects of its presentation. By using commands, environments, and packages, it becomes possible to maintain consistent formatting even in documents containing complicated mathematical and technical material.
+
+## Screenshots
+
+![alt text](assets/image-latex.png)

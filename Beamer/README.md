@@ -53,3 +53,7 @@ This generates the presentation as a PDF.
 This exercise helped me understand how presentations can be created using the same typesetting system used for technical documents. Beamer makes it possible to define slide structure and formatting directly in source code, which is particularly useful when working with technical material that needs consistent formatting.
 
 It also gave me a practical introduction to the idea that a presentation can be treated as a structured document rather than simply a collection of individually designed slides.
+
+## Screenshots
+
+![alt text](assets/image-beamer.png)

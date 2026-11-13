@@ -159,3 +159,6 @@ One particularly useful part of the exercise was comparing `git revert` and `git
 
 The assignment submission is provided as a PDF containing screenshots of the terminal operations and brief explanations of each step.
 
+## Screenshots
+
+![alt text](assets/image-git.png)
