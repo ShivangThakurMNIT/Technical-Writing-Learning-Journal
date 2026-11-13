@@ -119,3 +119,6 @@ The exercises introduced me to tools that address different parts of this proces
 
 This repository serves as a record of that learning process and brings together the practical work completed during the lab.
 
+## Screenshots
+
+![alt text](assets/image.png)
