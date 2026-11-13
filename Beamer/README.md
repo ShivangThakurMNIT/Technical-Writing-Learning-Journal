@@ -56,4 +56,4 @@ It also gave me a practical introduction to the idea that a presentation can be 
 
 ## Screenshots
 
-![alt text](assets/image-beamer.png)
+![alt text](../assets/image-beamer.png)

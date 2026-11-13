@@ -136,4 +136,4 @@ An important takeaway was that LaTeX separates the content of a document from ma
 
 ## Screenshots
 
-![alt text](assets/image-latex.png)
+![alt text](../assets/image-latex.png)

@@ -161,4 +161,4 @@ The assignment submission is provided as a PDF containing screenshots of the ter
 
 ## Screenshots
 
-![alt text](assets/image-git.png)
+![alt text](../assets/image-git.png)

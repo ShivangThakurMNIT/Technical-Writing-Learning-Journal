@@ -111,4 +111,4 @@ It also introduced me to the idea of generating documentation automatically from
 
 ## Screenshots
 
-![alt text](assets/image-dox.png)
+![alt text](../assets/image-dox.png)
